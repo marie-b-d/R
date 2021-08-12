@@ -1,4 +1,4 @@
-usethis::use_git()
+
 nrow(g)
 ncol(g)
 dim(g)
@@ -55,9 +55,6 @@ table(g$agego_dec)
 
 g$agego_dec<- cut(g$ag, c(15,25,35,45,55,65,75,85,95), include.lowest=TRUE, right=FALSE, labels=c("15-24","25-34","35-44","45-54","55-64","65-74","75-84","+85"))
 table(g$agego_dec, useNA="ifany")
-
-
-freq(g$agego_dec, cum=TRUE, total=TRUE, digits=2, exclude=NA)
 
 barplot(table(g$agego_dec),main="R?partition de la population par classes d'?ge", xlab="Ages", ylab="Effectifs", col="magenta", ylim=c(0,800))
 
